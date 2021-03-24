@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1042178165011",
+    "project_id": "nikkinotes-ddd60",
+    "storage_bucket": "nikkinotes-ddd60.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1042178165011:android:387364b341ecc39eeff2e6",
+        "android_client_info": {
+          "package_name": "com.example.nikki"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1042178165011-6htdon3ge06r243vj662jsu7rgrnou2v.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCWO-i-mVPmREq-NqmoOTDjpsKaF6ZVwLo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1042178165011-6htdon3ge06r243vj662jsu7rgrnou2v.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
