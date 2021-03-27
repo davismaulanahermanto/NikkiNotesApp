@@ -1,4 +1,4 @@
-package com.example.nikkinotes
+package com.davis.nikkinotes
 
 import io.flutter.embedding.android.FlutterActivity
 

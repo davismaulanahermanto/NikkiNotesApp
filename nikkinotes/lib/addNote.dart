@@ -5,23 +5,29 @@ class AddNote extends StatelessWidget {
 
   TextEditingController title = TextEditingController();
   TextEditingController content = TextEditingController();
-
-  CollectionReference _reference = FirebaseFirestore.instance.collection('notes');
   
   @override
   Widget build(BuildContext context) {
+    FirebaseFirestore firestore = FirebaseFirestore.instance;
+    CollectionReference notes = firestore.collection('notes');
+
     return Scaffold(
       appBar: AppBar(
         actions: [
           FlatButton(
             onPressed: (){
-              _reference.add({
-                'title': title.text,
-                'content': content.text
+              notes.add({
+                'Title': title.text,
+                'Content': content.text
               }).whenComplete(() => Navigator.pop(context));
-
+              
             }, 
-            child: Text('Save'),
+            child: Text(
+              'Save',
+              style: TextStyle(
+                color: Colors.white,
+              ),
+            ),
       
           )
         ],

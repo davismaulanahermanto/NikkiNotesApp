@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.nikkinotes">
+    package="com.davis.nikkinotes">
    <application
         android:label="nikkinotes"
         android:icon="@mipmap/ic_launcher">
