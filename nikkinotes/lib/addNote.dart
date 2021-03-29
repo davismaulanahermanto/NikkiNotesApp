@@ -13,6 +13,7 @@ class AddNote extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Colors.redAccent,
         actions: [
           FlatButton(
             onPressed: (){
@@ -40,7 +41,10 @@ class AddNote extends StatelessWidget {
               decoration: BoxDecoration(border: Border.all()),
               child: TextField(
                 controller: title,
-                decoration: InputDecoration(hintText: 'Title'),
+                decoration: InputDecoration(
+                  hintText: 'Title',
+                  contentPadding: EdgeInsets.symmetric(horizontal: 16.0),
+                ),
               ),
             ),
             SizedBox(height: 10,),
@@ -51,7 +55,10 @@ class AddNote extends StatelessWidget {
                   controller: content,
                   maxLines: null,
                   expands: true,
-                  decoration: InputDecoration(hintText: 'Content'),
+                  decoration: InputDecoration(
+                    hintText: 'Content',
+                    contentPadding: EdgeInsets.symmetric(horizontal: 16.0,vertical: 16.0),
+                  ),
                 ),
               )
             )
