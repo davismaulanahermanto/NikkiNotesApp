@@ -37,6 +37,22 @@ class _EditNoteState extends State<EditNote> {
           FlatButton(
             onPressed: (){
 
+              widget.docToEdit.reference.delete().whenComplete(() => Navigator.pop(context));
+
+              
+            }, 
+            child: Text(
+              'Delete',
+              style: TextStyle(
+                color: Colors.white,
+              ),
+            ),
+      
+          ),
+
+          FlatButton(
+            onPressed: (){
+
               widget.docToEdit.reference.update({
                 'Title': title.text,
                 'Content': content.text
@@ -52,22 +68,6 @@ class _EditNoteState extends State<EditNote> {
             ),
       
           ),
-
-          FlatButton(
-            onPressed: (){
-
-              widget.docToEdit.reference.delete().whenComplete(() => Navigator.pop(context));
-
-              
-            }, 
-            child: Text(
-              'Delete',
-              style: TextStyle(
-                color: Colors.white,
-              ),
-            ),
-      
-          )
         ],
       ),
       body: Container(

@@ -54,6 +54,7 @@ class HomePage extends StatelessWidget {
                     children: [
                       Text(
                         snapshot.data.docs[index].data()['Title'],
+                        maxLines: 1,
                         style: TextStyle(
                           color: Colors.white,
                           fontWeight: FontWeight.bold,
@@ -61,7 +62,9 @@ class HomePage extends StatelessWidget {
                         ),
                       ),
                       SizedBox(height: 10,),
-                      Text(snapshot.data.docs[index].data()['Content'],
+                      Text(
+                        snapshot.data.docs[index].data()['Content'],
+                        maxLines: 4,
                         style: TextStyle(
                           color: Colors.white,
                         ),
