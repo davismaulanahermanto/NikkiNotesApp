@@ -7,6 +7,7 @@ void main() async {
   await Firebase.initializeApp();
   runApp(MaterialApp(
     debugShowCheckedModeBanner: false,
+    
     home: SplashScreen(),
   ));
 }

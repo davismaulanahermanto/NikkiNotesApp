@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:date_time_picker/date_time_picker.dart';
 
 class AddNote extends StatelessWidget {
 
@@ -10,6 +11,7 @@ class AddNote extends StatelessWidget {
   Widget build(BuildContext context) {
     FirebaseFirestore firestore = FirebaseFirestore.instance;
     CollectionReference notes = firestore.collection('notes');
+    DateTime now = new DateTime.now();
 
     return Scaffold(
       appBar: AppBar(
@@ -19,7 +21,11 @@ class AddNote extends StatelessWidget {
             onPressed: (){
               notes.add({
                 'Title': title.text,
-                'Content': content.text
+                'Content': content.text,
+                'Day' : now.day.toString(),
+                'Month' : now.month.toString(),
+                'Year' : now.year.toString(),
+                'Date' : now,
               }).whenComplete(() => Navigator.pop(context));
               
             }, 
@@ -47,7 +53,9 @@ class AddNote extends StatelessWidget {
                 ),
               ),
             ),
+
             SizedBox(height: 10,),
+
             Expanded(
               child: Container(
                 decoration: BoxDecoration(border: Border.all()),

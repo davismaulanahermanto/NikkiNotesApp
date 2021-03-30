@@ -34,6 +34,7 @@ dev_dependencies:
     sdk: flutter
   cloud_firestore: ^1.0.2
   firebase_core: ^1.0.2
+  date_time_picker: ^2.0.0
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
@@ -78,4 +79,4 @@ flutter:
   # see https://flutter.dev/custom-fonts/#from-packages
 
   assets:
-  - assets/splashscreen.jpeg
+  - assets/splashscreen.png
